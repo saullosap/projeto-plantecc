@@ -1,0 +1,142 @@
+/* Mobile First */
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Mobile First - Imagem */
+
+.section-image{
+    display: none;
+    visibility: hidden;
+}
+
+/* Mobile First Formulario de Login */
+
+/* Logo */
+.logo{
+    margin-top: 1rem;
+    padding: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: clamp(100px, 12.57vw, 250px);
+    height: auto; 
+}
+
+/* Formulario */
+
+form{
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #9ca3af;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Título Formulário */
+
+.form-title {
+    margin-bottom: 1rem;
+}
+
+.form-title p{
+    margin: auto;
+
+    color: #1b98e0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.form-title h1{
+    margin: auto;
+
+    color: #13293d;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Entradas Formulario */
+
+.form-control {
+    margin: 10px 0;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+form input[type="email"],
+form input[type="password"]{
+    padding: 16px 0 16px 27px;
+
+    color: #1b98e0;
+}
+
+
+form input[type="email"]::placeholder,
+form input[type="password"]::placeholder{
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #1b98e0;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+}
+
+.actions a{
+    
+    margin-top: 0.5rem;
+    color: #1b98e0;
+}
+
+form button{
+    padding: 16px 0;
+    
+    background-color: #1b98e0;
+    color: #FFF;
+
+    cursor: pointer;
+}
+
+/* Transições */
+.form-control,
+form button {
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover {
+    background-color: #13293d;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="checkbox"]:focus {
+    outline: 2px solid #1b98e0;
+    outline-offset: 2px;
+}
+
+
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+    border-color: #1b98e0;
+    box-shadow: 0 0 0 3px rgba(27, 152, 224, 0.2); /* azul suave ao redor */
+    outline: none;
+}
