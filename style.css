@@ -9,8 +9,22 @@ html, body {
     padding: 0;
     min-height: 100vh;
 
+    background-color: #f9fafb;
     font-family: 'Open Sans', sans-serif;
 }
+
+main {
+    height: 100vh;
+    overflow-y: auto;
+    
+    display: flex;
+    justify-content: center;
+    background-image: url('assets/contabilidade.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 /* LADO ESQUERDO */
 
@@ -22,13 +36,8 @@ html, body {
 /* LADO DIREITO */
 
 .section-form{
-    background-image: url('assets/contabilidade.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    padding: 2rem;
-    /* flex: 1; */
+    display: flex;
+    justify-content: center;
 }
 
 .box-form {
@@ -47,14 +56,10 @@ html, body {
 }
 
 .logo img {
-    width: clamp(100px, 9vw, 250px);
+    width: clamp(6.25rem, 9vw, 15.625rem);
     height: auto; 
-}
-
-.section-form{
-    display: flex;
-    align-content:space-evenly;
-    justify-content: center;
+    max-height: 100px;
+    max-width: 100%;
 }
 
 .section-form form{
@@ -92,7 +97,7 @@ html, body {
 }
 
 .input-control {
-    margin: 10px 0;
+    margin: 0.7rem 0;
     border: 1px solid #9ca3af;
     border-radius: 6px;
 
@@ -102,7 +107,7 @@ html, body {
 
 form input[type="email"],
 form input[type="password"]{
-    padding: 16px 0 16px 27px;
+    padding: 1rem 0 1rem 1.7rem;
 
     color: #1b98e0;
 }
@@ -112,6 +117,7 @@ form input[type="password"]::placeholder{
     font-size: 1rem;
     font-weight: normal;
     color: #1b98e0;
+    opacity: 0.8;
 }
 
 .actions {
@@ -126,7 +132,7 @@ form input[type="password"]::placeholder{
 }
 
 form button{
-    padding: 16px 0;
+    padding: 1rem 0;
     
     background-color: #1b98e0;
     color: #FFF;
@@ -161,10 +167,11 @@ form button{
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
 
     main{
-        display: flex;
+        /* display: flex; */
+        background-image: none;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -188,13 +195,10 @@ form button{
     }
 
     .section-form{
-        background-image: none;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 2rem;
         flex: 0 0 42.5%;
-        height: 100vh;
     }
 
     .section-form form{
@@ -213,6 +217,24 @@ form button{
     }
 }
 
+@media (max-height: 600px) {
+
+    .section-form {
+        align-items: flex-start;
+        padding-top: 1rem;
+    }
+
+    .section-form form {
+        padding: 2rem;
+    }
+
+    .logo img{
+        
+    }
+
+
+}
+
 /* Efeitos e Transições */
 
 .input-control,
@@ -222,6 +244,10 @@ form button {
 
 form button:hover {
     background-color: #13293d;
+}
+
+form button:active {
+    transform: scale(0.98);
 }
 
 form input[type="email"],
